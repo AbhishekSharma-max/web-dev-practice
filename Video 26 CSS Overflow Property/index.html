@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS overflow Property</title>
+    <style>
+        .box {
+            width: 30vw;
+            height: 30vh;
+            border: 2px solid black;
+            /* Shows scrollbars only when content overflows the container */
+            /* overflow: auto;   */
+            /*Always shows scrollbars, even if content does not overflow*/
+            /* overflow: scroll; */
+            /* Prevents text from wrapping to the next line and keeps it on a single line */
+            /* white-space: nowrap;  */
+            /* Hides overflowing content */
+            /* overflow: hidden;  */
+            /* Shows "..." when text is cut off */
+            text-overflow: ellipsis;
+            /* Clips (cuts off) overflowing content without scrollbars */
+            /* overflow: clip; */
+            /* overflow-x: hidden;
+            overflow-y: scroll; */
+            /* Hides horizontal overflow (x) and shows vertical scrollbar only when needed (y) */
+            overflow: hidden auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        I am a good boy Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque vel consequatur, eos a
+        voluptatum vero sint, voluptate non pariatur officiis ratione temporibus aliquid animi? Quisquam at, alias nemo
+        officia harum obcaecati dignissimos nulla ex, voluptatum recusandae cum veritatis similique tenetur
+        necessitatibus velit rerum esse corporis?
+
+    </div>
+</body>
+
+</html>

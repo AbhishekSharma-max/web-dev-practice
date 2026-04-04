@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables</title>
+    <!-- /* CSS variable → reusable value stored with --name, accessed using var() */ -->
+    <style>
+        :root {
+            --color: rgb(124, 82, 203); 
+            --seccolor: rgb(174, 174, 222);
+            --defpad: 23px;
+            --defop: 0.2;
+
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav {
+            background-color: var(--color);
+        }
+
+        .container {
+            background-color: var(--seccolor);
+        }
+
+        ul {
+            /* display:flex → makes a flex container; aligns child elements easily in row or column */
+            display: flex;
+        }
+
+        ul li {
+            /* list-style:none → removes default bullets/numbers from ul or ol */
+            list-style: none;
+            opacity: var(--defop);
+            border: 2px solid var(--seccolor);
+            padding: var(--defpad);
+        }
+        ul li:first-child {
+             --color: rgb(72, 25, 160); 
+             background-color: var(--color, blue);
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum beatae explicabo aliquam eum omnis animi
+        dignissimos aspernatur, aliquid ut corrupti magni quisquam dolor eligendi ratione dolore enim libero nihil
+        deleniti alias. Est, sapiente beatae?
+
+    </div>
+</body>
+
+</html>
